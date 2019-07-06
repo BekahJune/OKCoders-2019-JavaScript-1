@@ -1,6 +1,6 @@
 2019 OK Coders JavaScript Class 
 
-This is an ongoing project for OK Coders BootCamp - Intro to Programming
-I hope to learn more about programming and expand my current skillset
+>This is an ongoing project for OK Coders BootCamp - Intro to Programming
+>I hope to learn more about programming and expand my current skillset
 
 rebekahj.b@outlook.com
