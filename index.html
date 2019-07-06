@@ -9,12 +9,14 @@
 
 <body>
     <script> // JavaScript 
-        document.write("<strong>June Brown</strong>");
-        document.write("<br />");
-        document.write("<br />");
-        document.write("<div>Age: " + (35 /3) + "</div>");
-        document.write("<br />");
-        document.write("<div>Day: " + (20 * 127) + "</div>");
+        var name = prompt("User's name?");
+        var age = prompt("User's age?");
+
+        if (age > 55) {
+            document.write("User is old");
+        } else {
+            document.write("User is young");
+        }
     </script>
 </body>
 
