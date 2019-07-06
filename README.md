@@ -1,4 +1,4 @@
-2019 OK Coders JavaScript Class 
+2019 OK Coders JavaScript Class
 
 >This is an ongoing project for OK Coders BootCamp - Intro to Programming
 >
