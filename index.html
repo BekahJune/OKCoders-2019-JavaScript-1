@@ -9,12 +9,14 @@
 
 <body>
     <script> // JavaScript 
-       var number = 99;
-       while (number < 100 && number > 0) {
-       document.write(number + " bottles of beer on the wall. ");
-       document.write(number + " bottles of beer. Take one down, pass it around, ");
-       number--;
-       document.write(number + " bottles of beer on the wall. ");
+       var number = prompt("Count from what?");
+       var number2 = prompt("Count down to what?");
+
+       // while(number < 100){
+        for(var i = number; i>number2; i--){
+        document.write("Number " + i + "<br>");
+        // number++;
+
        }
     </script>
 </body>
