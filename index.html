@@ -12,29 +12,33 @@
         var rows = prompt("How many rows?");
         var cols = prompt("How many cols?");
 
-        function makeRow(){
-            for(var i = i; i <= cols; i++)
-            document.write(" X ");
-
-        function findNumberOfCells(){
+        function findNumberOfCells() {
             var total = cols * rows;
 
-            if(total > 100){
+            if (total > 100) {
                 alert("Too many rows...");
                 return "A BillZillion";
             }
+
             return total;
         }
-        
-        for(var i =1; i <= rows; i++){
+
+        function makeRow() {
+            for (var i = 1; i <= cols; i++)
+                document.write(" X ");
+
+        for (var i = 1; i <= rows; i++){
             makeRow();
             document.write("<br>");
+            console.log("Code got this far!")
         }
+
         var totalCells = findNumberOfCells();
         document.write("With " + rows + " Rows and" + cols);
-        document.write(" there are " + totalCells() );
+        document.write(" there are " + totalCells());
         document.write(" total cells.");
-        
+
     </script>
 </body>
+
 </html>
