@@ -9,10 +9,12 @@
 
 <body>
     <script> // JavaScript 
-       var words = "It is a far far better thing I do";
+        var humanYears = prompt("Dog in Human Years?");
 
-       var upperWords = words.toUpperCase();
-       document.write(upperWords);
+        function dogAge(age) {
+            document.write("Your dog is " + (age * 7) + " years.");
+        }
+        dogAge(humanYears);
     </script>
 </body>
 
