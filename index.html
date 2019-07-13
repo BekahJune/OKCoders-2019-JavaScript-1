@@ -15,13 +15,26 @@
         function makeRow(){
             for(var i = i; i <= cols; i++)
             document.write(" X ");
+
+        function findNumberOfCells(){
+            var total = cols * rows;
+
+            if(total > 100){
+                alert("Too many rows...");
+                return "A BillZillion";
+            }
+            return total;
         }
+        
         for(var i =1; i <= rows; i++){
             makeRow();
             document.write("<br>");
         }
+        var totalCells = findNumberOfCells();
+        document.write("With " + rows + " Rows and" + cols);
+        document.write(" there are " + totalCells() );
+        document.write(" total cells.");
         
     </script>
 </body>
-
 </html>
