@@ -9,17 +9,17 @@
 
 <body>
     <script> // JavaScript 
-       var number = prompt("Count from what?");
-       var number2 = prompt("Count down to what?");
+        var cols = prompt("How many columns to print?");
+        var rows = prompt("How man rows to print?");
 
-       // while(number < 100){
-        for(var i = number; i>number2; i--){
-        document.write("Number " + i + "<br>");
-        // number++;
+        for(var x = 1; x <= rows; x++){
+            for(var i = 1; i <= cols; i++){
+                document.write(" X ");
+            }
+        documnet.write("<br>");
+        }
 
-       }
     </script>
 </body>
 
 </html>
-
