@@ -9,16 +9,18 @@
 
 <body>
     <script> // JavaScript 
-        var cols = prompt("How many columns to print?");
-        var rows = prompt("How man rows to print?");
+        var rows = prompt("How many rows?");
+        var cols = prompt("How many cols?");
 
-        for(var x = 1; x <= rows; x++){
-            for(var i = 1; i <= cols; i++){
-                document.write(" X ");
-            }
-        documnet.write("<br>");
+        function makeRow(){
+            for(var i = i; i <= cols; i++)
+            document.write(" X ");
         }
-
+        for(var i =1; i <= rows; i++){
+            makeRow();
+            document.write("<br>");
+        }
+        
     </script>
 </body>
 
