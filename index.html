@@ -9,16 +9,10 @@
 
 <body>
     <script> // JavaScript 
-        function bobSays(whatHeSaid, times) {
-            for (var i = 1; i <= times; i++) {
-                document.write("Bob says, " + whatHeSaid);
-                document.write("<br>");
-            }
-        }
+       var words = "It is a far far better thing I do";
 
-        bobSays("Use tabs not space ", 10);
-        bobSays("Linux rocsks", 3);
-
+       var upperWords = words.toUpperCase();
+       document.write(upperWords);
     </script>
 </body>
 
