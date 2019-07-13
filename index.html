@@ -9,34 +9,15 @@
 
 <body>
     <script> // JavaScript 
-        var rows = prompt("How many rows?");
-        var cols = prompt("How many cols?");
-
-        function findNumberOfCells() {
-            var total = cols * rows;
-
-            if (total > 100) {
-                alert("Too many rows...");
-                return "A BillZillion";
+        function bobSays(whatHeSaid, times) {
+            for (var i = 1; i <= times; i++) {
+                document.write("Bob says, " + whatHeSaid);
+                document.write("<br>");
             }
-
-            return total;
         }
 
-        function makeRow() {
-            for (var i = 1; i <= cols; i++)
-                document.write(" X ");
-
-        for (var i = 1; i <= rows; i++){
-            makeRow();
-            document.write("<br>");
-            console.log("Code got this far!")
-        }
-
-        var totalCells = findNumberOfCells();
-        document.write("With " + rows + " Rows and" + cols);
-        document.write(" there are " + totalCells());
-        document.write(" total cells.");
+        bobSays("Use tabs not space ", 10);
+        bobSays("Linux rocsks", 3);
 
     </script>
 </body>
