@@ -19,30 +19,34 @@
 
     <script>
         // Objects
-        var book1 = { author: "J.R.R. Tolkein", title: "Lord of the Rings" };
-        var book2 = { author: "Herman Melville", title: "Moby Dick" };
-        var book3 = { title: "Pride and Prejudice", author: "Jane Austen" };
+        // var book1 = { author: "J.R.R. Tolkein", title: "Lord of the Rings" };
+        // var book2 = { author: "Herman Melville", title: "Moby Dick" };
+        // var book3 = { title: "Pride and Prejudice", author: "Jane Austen" };
 
         // Array of Objects
-        let books = [book1, book2, book3];
+        let books = [
+            { author: "J.R.R. Tolkein", title: "Lord of the Rings" },
+            { author: "Herman Melville", title: "Moby Dick" },
+            { title: "Pride and Prejudice", author: "Jane Austen" }
+        ];
 
         function displayToScreen() {
-           let n = document.getElementById("name").value;
-           let t = document.getElementById("title").value;
+            let n = document.getElementById("name").value;
+            let t = document.getElementById("title").value;
 
-           // Create New Book
-            let newBook = { title: t, author: n}
+            // Create New Book
+            // let newBook = { title: t, author: n }
 
-            books.push(newBook);
+            books.push({ title: t, author: n });
             printAuthList();
-         }
+        }
 
         function printAuthList() {
             let auth = document.getElementById("myList");
             auth.innerHTML = " ";
             for (let i = 0; i < books.length; i++) {
-                    auth.innerHTML += "<h2>" + books[i].title + "</h2>";
-                    auth.innerHTML += "<h4>" + books[i].author + "</h4>";
+                auth.innerHTML += "<h2>" + books[i].title + "</h2>";
+                auth.innerHTML += "<h4>" + books[i].author + "</h4>";
             }
         }
 
