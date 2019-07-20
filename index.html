@@ -8,29 +8,20 @@
 </head>
 
 <body>
+    <div id="music">
+        <h1 id="title"></h1>
+        <h3 id="author"></h3>
+    </div>
     <script>
-        function displayToScreen(sometext){
-            document.write(sometext);
+        function displayToScreen(a, t) {
+            document.getElementById("author").innerText = a;
+            document.getElementById("title").innerText = t;
         }
 
-        let ourList = [ "one", "two", "3"];
-
-        // add another item to our list
-
-        ourList[3] = "fourth";
-        ourList.push("Yet Another");
-        ourList[ourList.length] = "Why not another?"
-
-        // remove an array/list
-
-        ourList.pop();
-
-        for(let i = 0; i < ourList.length; i++){
-            // let message = ourList[i]; - not necessary
-            displayToScreen( ourList[i]);
-            document.write("<br>");
-        }
-
+        let title = prompt("Name of title?");
+        let auth = prompt("Name of author?");
+        displayToScreen(auth, title);
+        document.write("<br>"); 
     </script>
 </body>
 
