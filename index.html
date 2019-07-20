@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>OK Coders</title>
+    <title>My Webpage Coders</title>
 </head>
 
 <body>
-    <script> // JavaScript 
-        var humanYears = prompt("Dog in Human Years?");
-
-        function dogAge(age) {
-            document.write("Your dog is " + (age * 7) + " years.");
+    <script>
+        function displayToScreen(sometext){
+            document.write(sometext);
         }
-        dogAge(humanYears);
+
+        let ourList = [ "one", "two", "3"];
+
+        // add another item to our list
+
+        ourList[3] = "fourth";
+        ourList.push("Yet Another");
+        ourList[ourList.length] = "Why not another?"
+
+        // remove an array/list
+
+        ourList.pop();
+
+        for(let i = 0; i < ourList.length; i++){
+            // let message = ourList[i]; - not necessary
+            displayToScreen( ourList[i]);
+            document.write("<br>");
+        }
+
     </script>
 </body>
 
