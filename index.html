@@ -12,16 +12,16 @@
         <h1 id="title"></h1>
         <h3 id="author"></h3>
     </div>
-    <script>
-        function displayToScreen(a, t) {
-            document.getElementById("author").innerText = a;
-            document.getElementById("title").innerText = t;
-        }
 
-        let title = prompt("Name of title?");
-        let auth = prompt("Name of author?");
-        displayToScreen(auth, title);
-        document.write("<br>"); 
+    <input type="text" id="name" placeholder="Charles Dickens">
+    <button onclick="displayToScreen()">Set Author</button>
+
+
+    <script>
+        function displayToScreen() {
+            
+            let auth = document.getElementById("name").value
+            document.getElementById("author").innerText = auth;      }
     </script>
 </body>
 
