@@ -8,20 +8,33 @@
 </head>
 
 <body>
-    <div id="music">
-        <h1 id="title"></h1>
-        <h3 id="author"></h3>
+    <div id="myList">
     </div>
 
-    <input type="text" id="name" placeholder="Charles Dickens">
-    <button onclick="displayToScreen()">Set Author</button>
-
+    <div>
+        <input type="text" id="name" placeholder="Charles Dickens">
+        <button onclick="displayToScreen()">Set Author</button>
+    </div>
 
     <script>
-        function displayToScreen() {
-            
-            let auth = document.getElementById("name").value
-            document.getElementById("author").innerText = auth;      }
+        var authors = ["Virginia Woolf", "J.R.R. Tolkein"];
+
+        function displayToScreen(){
+            let n = document.getElementById("name").value;
+            authors.push(n);
+            document.getElementById("name").value = " ";
+            printAuthlist();
+        }
+
+        function printAuthList(){
+            let auth = document.getElementById("myList");
+            auth.innerHTML = " ";
+            for(let i = 0; i < authors.length; i++){
+                auth.innerHTML += "<h2>" + authors[i] + "</h2>";
+            }
+        }
+
+        printAuthList();
     </script>
 </body>
 
