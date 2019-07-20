@@ -12,25 +12,37 @@
     </div>
 
     <div>
-        <input type="text" id="name" placeholder="Charles Dickens">
-        <button onclick="displayToScreen()">Set Author</button>
+        <input type="text" id="name" placeholder="Enter Author Name">
+        <input type="text" id="title" placeholder="Enter Book Name">
+        <button onclick="displayToScreen()">Author and Title</button>
     </div>
 
     <script>
-        var authors = ["Virginia Woolf", "J.R.R. Tolkein"];
+        // Objects
+        var book1 = { author: "J.R.R. Tolkein", title: "Lord of the Rings" };
+        var book2 = { author: "Herman Melville", title: "Moby Dick" };
+        var book3 = { title: "Pride and Prejudice", author: "Jane Austen" };
 
-        function displayToScreen(){
-            let n = document.getElementById("name").value;
-            authors.push(n);
-            document.getElementById("name").value = " ";
-            printAuthlist();
-        }
+        // Array of Objects
+        let books = [book1, book2, book3];
 
-        function printAuthList(){
+        function displayToScreen() {
+           let n = document.getElementById("name").value;
+           let t = document.getElementById("title").value;
+
+           // Create New Book
+            let newBook = { title: t, author: n}
+
+            books.push(newBook);
+            printAuthList();
+         }
+
+        function printAuthList() {
             let auth = document.getElementById("myList");
             auth.innerHTML = " ";
-            for(let i = 0; i < authors.length; i++){
-                auth.innerHTML += "<h2>" + authors[i] + "</h2>";
+            for (let i = 0; i < books.length; i++) {
+                    auth.innerHTML += "<h2>" + books[i].title + "</h2>";
+                    auth.innerHTML += "<h4>" + books[i].author + "</h4>";
             }
         }
 
