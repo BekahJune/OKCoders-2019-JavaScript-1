@@ -12,12 +12,22 @@
     </div>
 
     <div>
+        <button onclick="removeBook()">Remove Book</button>
         <input type="text" id="name" placeholder="Enter Author Name">
         <input type="text" id="title" placeholder="Enter Book Name">
-        <button onclick="displayToScreen()">Author and Title</button>
+        <button onclick="displayToScreen()">Add Book</button>
     </div>
 
     <script>
+        // Remove Book
+        function removeBook() {
+            let n = document.getElementById("name").value;
+            let t = document.getElementById("title").value;
+
+            books.pop({ title: t, author: n});
+            printAuthList();
+        }
+
         // Objects
         // var book1 = { author: "J.R.R. Tolkein", title: "Lord of the Rings" };
         // var book2 = { author: "Herman Melville", title: "Moby Dick" };
